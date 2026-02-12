@@ -1,0 +1,29 @@
+modules:
+  jira:adminPage:
+    - key: forge-queue-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      title: forge-queue-demo
+  consumer:
+    - key: queue-consumer
+      queue: long-job-queue
+      function: consumer-function
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: consumer-function
+      handler: consumer.handler
+      timeoutSeconds: 600
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/0f6eb6a3-8b3b-4480-9369-87e12c311e8c
+permissions:
+  scopes:
+    - storage:app

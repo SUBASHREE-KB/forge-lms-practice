@@ -1,0 +1,36 @@
+modules:
+  jira:adminPage:
+    - key: forge-sql-crud-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      title: User Management
+
+  scheduledTrigger:
+    - key: db-migration
+      function: migration
+      interval: hour
+
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: migration
+      handler: index.runMigration
+
+  sql:
+    - key: main
+      engine: mysql
+
+resources:
+  - key: main
+    path: static/hello-world/build
+
+permissions:
+  scopes:
+    - storage:app
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/3570b324-96ba-4866-af32-7b7ffcad5257

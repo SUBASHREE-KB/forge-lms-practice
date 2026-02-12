@@ -1,6 +1,6 @@
 # Forge Hello World
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira admin page. 
+This project contains a Forge app written in Javascript that implements queue mechanism in forge in a Jira admin page. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 

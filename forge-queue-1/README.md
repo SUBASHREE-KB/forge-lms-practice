@@ -1,4 +1,4 @@
-# Forge Hello World
+# Forge Queue Mechanism
 
 This project contains a Forge app written in Javascript that implements queue mechanism in forge in a Jira admin page. 
 

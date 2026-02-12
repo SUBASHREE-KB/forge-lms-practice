@@ -1,6 +1,6 @@
-# Forge Hello World
+# Forge SQL
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in a Jira admin page. 
+This project contains a Forge app written in Javascript that implements basic CRUD operations using forge SQL in a Jira admin page. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
